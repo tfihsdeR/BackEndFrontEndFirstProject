@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ToDo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="createNewToDo">
+        <div style="display: flex; justify-content: center; margin-bottom: 5px;">
+            <span>Create new ToDo</span>
+        </div>
+        <div>
+            <form onsubmit="CreateToDo(event)" style="display: flex; justify-content: center; align-items: center;">
+                <label for="messageCreate">Message:</label>
+                <textarea id="messageCreate" name="message" rows="4" required style="height: 20px; margin-left: 5px; margin-right: 5px;" placeholder="Create new Message."></textarea>
+    
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div id="getByNameToDo" style="margin-top: 20px;">
+        <div style="display: flex; justify-content: center; margin-bottom: 5px;">
+            <span>Get By Name</span>
+        </div>
+        <div>
+            <form onsubmit="GetByMessageToDo(event)" style="display: flex; justify-content: center; align-items: center;">
+                <label for="messageGet">Message:</label>
+                <textarea id="messageGet" name="message" rows="4" required style="height: 20px; margin-left: 5px; margin-right: 5px;" placeholder="Get By Message."></textarea>
+    
+                <input type="submit" value="Get">
+            </form>
+        </div>
+    </div>
+    <div style="margin-top: 5px;">
+        <div>
+            <button onclick="GetAllToDoList()">Get All List</button>
+        </div>
+        <div>
+            <table class="toDoList" style="margin-top: 5px;">
+                <thead class="tHead"></thead>
+                <tbody class="tBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="ToDo.js"></script>
+</body>
+
+</html>
